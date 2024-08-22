@@ -223,8 +223,8 @@ Hint: Use the String.prototype.split() method to separate the first and last
 */
 
 let firstLast = people.map((person) => {
-    let [lastName, firstName] = person.split(', ')
-    return `${firstName} ${lastName}`
+  let [lastName, firstName] = person.split(", ");
+  return `${firstName} ${lastName}`;
 });
 
 // Complete the exercise in the space below:
@@ -274,8 +274,6 @@ console.log("Exercise 5 correct result: ", [
   "William Blake",
 ]);
 
-
-
 /*
 Exercise 6: Array.prototype.some()
 
@@ -288,21 +286,17 @@ old or older.
 - Store the result (true or false) in the variable 'isAdultPresent'. 
 */
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 let isAdultPresent = devs.some((person) => {
-    const age = currentYear - person.year
-    return age >= 18
-})
+  const age = currentYear - person.year;
+  return age >= 18;
+});
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Exercise 6 my result: ', isAdultPresent)
-console.log('Exercise 6 correct result: ', true)
-
-
+console.log("Exercise 6 my result: ", isAdultPresent);
+console.log("Exercise 6 correct result: ", true);
 
 /*
 Exercise 7: Array.prototype.every()
@@ -318,20 +312,15 @@ Use Array.prototype.every() to determine if every person in the devs array is
 */
 
 let isEveryone19OrOlder = devs.every((person) => {
-    const age = currentYear - person.year
-    return age >=19
-})
+  const age = currentYear - person.year;
+  return age >= 19;
+});
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Exercise 7 my result: ', isEveryone19OrOlder)
-console.log('Exercise 7 correct result: ', false)
-
-
-
+console.log("Exercise 7 my result: ", isEveryone19OrOlder);
+console.log("Exercise 7 correct result: ", false);
 
 /*
 Exercise 8: Array.prototype.find()
@@ -343,18 +332,14 @@ a specific ID 823423 from an array of comment objects.
 */
 
 let commentById = comments.find((comment) => {
-    return comment.id === 823423
-})
+  return comment.id === 823423;
+});
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Exercise 8 my result: ', commentById)
-console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 })
-
-
+console.log("Exercise 8 my result: ", commentById);
+console.log("Exercise 8 correct result: ", { text: "Super good", id: 823423 });
 
 /*
 Exercise 9: Array.prototype.findIndex()
@@ -366,18 +351,14 @@ of comment objects.
 */
 
 let idx = comments.findIndex((index) => {
-    return index.id === 123523
-})
+  return index.id === 123523;
+});
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Exercise 9 my result: ', idx)
-console.log('Exercise 9 correct result: ', 3)
-
-
+console.log("Exercise 9 my result: ", idx);
+console.log("Exercise 9 correct result: ", 3);
 
 /*
 Level Up exercise 1: Array.prototype.reduce()
@@ -401,19 +382,15 @@ Hints:
 */
 
 let totalYearsLived = inventors.reduce((acc, inventor) => {
-    const lifeSpan = inventor.passed - inventor.year
-    return acc + lifeSpan
-}, 0)
+  const lifeSpan = inventor.passed - inventor.year;
+  return acc + lifeSpan;
+}, 0);
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Level Up 1 my result: ', totalYearsLived)
-console.log('Level Up 1 correct result: ', 861)
-
-
+console.log("Level Up 1 my result: ", totalYearsLived);
+console.log("Level Up 1 correct result: ", 861);
 
 /*
 Level Up exercise 2: Array.prototype.reduce()
@@ -436,22 +413,23 @@ Hints:
 */
 
 let travelMethodCounts = travelMethods.reduce((tally, method) => {
-    if (!tally[method]) {
-        tally [method] = 1
-    } else {
-        tally[method]++
-    }
-    
-    return tally
-}, {})
+  if (!tally[method]) {
+    tally[method] = 1;
+  } else {
+    tally[method]++;
+  }
+
+  return tally;
+}, {});
 
 // Complete the exercise in the space below:
 
-
-
 // Check your work:
-console.log('Level Up 2 my result: ', travelMethodCounts)
-console.log(
-  'Level Up 2 correct result: ', 
-  { car: 5, truck: 3, bike: 2, walk: 2, van: 2 }
-)
+console.log("Level Up 2 my result: ", travelMethodCounts);
+console.log("Level Up 2 correct result: ", {
+  car: 5,
+  truck: 3,
+  bike: 2,
+  walk: 2,
+  van: 2,
+});
